@@ -42,6 +42,7 @@ with DAG(
     t1 = BashOperator(
         task_id='print_date',
         bash_command='date',
+        queue='celery',
     )
 
     t2 = BashOperator(
